@@ -45,7 +45,7 @@ jobs:
         env:
           CC_wasm32_unknown_unknown: clang-18
           AR_wasm32_unknown_unknown: llvm-ar-18
-        run: trunk build --release --public-url /fedimint-walletv2-recoverytool/
+        run: trunk build --release --public-url /
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
