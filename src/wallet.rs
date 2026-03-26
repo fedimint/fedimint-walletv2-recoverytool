@@ -75,7 +75,9 @@ pub async fn sync_wallet(wallet: &mut Wallet, esplora_url: &str) -> Result<u64> 
         .build_async_with_sleeper::<WasmSleeper>()
         .context("Failed to build esplora client")?;
 
-    let request = wallet.start_full_scan().build();
+    let start_time = (js_sys::Date::now() / 1000.0) as u64;
+
+    let request = wallet.start_full_scan_at(start_time).build();
 
     let update = client
         .full_scan(request, 3, 3)

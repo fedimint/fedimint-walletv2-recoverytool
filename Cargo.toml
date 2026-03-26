@@ -26,6 +26,7 @@ esplora-client = { version = "0.12.2", default-features = false, features = [
 getrandom_0_2 = { package = "getrandom", version = "0.2", features = ["js"] }
 getrandom = { version = "0.3.3", features = ["wasm_js"] }
 gloo-timers = { version = "0.3.0", features = ["futures"] }
+js-sys = "0.3.77"
 leptos = { version = "0.7.8", default-features = false, features = ["csr"] }
 send_wrapper = "0.6.0"
 serde = { version = "1.0.219", features = ["derive"] }
